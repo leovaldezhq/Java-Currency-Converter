@@ -14,7 +14,7 @@ import java.net.http.HttpResponse;
 import java.util.Properties;
 
 public class CurrencyQuery {
-    public CurrencyDTO searchCurrency(String baseCode, String targetCode) throws IOException, InterruptedException {
+    public CurrencyDTO searchCurrency(String baseCode, String targetCode) {
         Properties properties = new Properties(); // Set up properties to keep the API Key secure
         try (FileInputStream fis = new FileInputStream("config.properties")) {
             properties.load(fis); // Load properties from the file
@@ -38,8 +38,8 @@ public class CurrencyQuery {
             HttpResponse<String> response = client
                     .send(request, HttpResponse.BodyHandlers.ofString());
             return gson.fromJson(response.body(), CurrencyDTO.class); // Simplified parsing with CurrencyDTO
-        } catch (Exception e) {
-            throw new RuntimeException(e.getMessage());
+        } catch (IOException | InterruptedException e) {
+            throw new RuntimeException("Error: " + e.getMessage());
         }
     }
 }
