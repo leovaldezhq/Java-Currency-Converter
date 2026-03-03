@@ -19,7 +19,7 @@ public class CurrencyQuery {
         try (FileInputStream fis = new FileInputStream("config.properties")) {
             properties.load(fis); // Load properties from the file
         } catch (IOException e) {
-            System.out.println("Error loading config.properties");
+            throw new RuntimeException("Config file not found");
         }
 
         String apiKey = properties.getProperty("rate.apikey");
