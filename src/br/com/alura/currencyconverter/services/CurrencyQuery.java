@@ -1,3 +1,6 @@
+package br.com.alura.currencyconverter.services;
+
+import br.com.alura.currencyconverter.models.CurrencyDTO;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -20,12 +23,10 @@ public class CurrencyQuery {
         }
 
         String apiKey = properties.getProperty("rate.apikey");
-
         String url = "https://v6.exchangerate-api.com/v6/" + apiKey + "/pair/" + baseCode + "/" + targetCode;
 
         Gson gson = new GsonBuilder()
                 .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-                .setPrettyPrinting()
                 .create();
 
         try {
@@ -36,11 +37,9 @@ public class CurrencyQuery {
                     .build();
             HttpResponse<String> response = client
                     .send(request, HttpResponse.BodyHandlers.ofString());
-            return gson.fromJson(response.body(), CurrencyDTO.class); // Usando a classe CurrencyDTO para fazer o parsing simplificado
-        } catch (RuntimeException e) {
-            System.out.println(e.getMessage());
+            return gson.fromJson(response.body(), CurrencyDTO.class); // Simplified parsing with CurrencyDTO
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
         }
-
-
     }
 }
