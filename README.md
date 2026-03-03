@@ -6,7 +6,7 @@
 
 <p>
 
-This project is an interactive currency converter that utilizes the ExchangeRate-API to obtain up-to-date quotes. The application allows conversions between the Brazilian Real (BRL) and currencies such as the Chinese Yuan (CNY), South Korean Won (KRW), and Cuban Peso (CUP), as well as their reverse operations. The program runs via terminal, offering a dynamic menu and exception handling to ensure stability during use.
+This project is an interactive currency converter that utilizes the ExchangeRate API to obtain up-to-date quotes. The application allows conversions between the Brazilian Real (BRL) and currencies such as the Chinese Yuan (CNY), South Korean Won (KRW), and Cuban Peso (CUP), as well as their reverse operations. The program runs via terminal, offering a dynamic menu and exception handling to ensure stability during use.
 
 </p>
 
