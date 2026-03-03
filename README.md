@@ -26,7 +26,7 @@ This project is an interactive currency converter that utilizes the ExchangeRate
 
 </ul>
 
-<h2>Concepts Worked On</h2>
+<h2>Concepts Covered</h2>
 
 <ul>
   
