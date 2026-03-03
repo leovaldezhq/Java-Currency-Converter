@@ -10,7 +10,6 @@ This project is an interactive currency converter that utilizes the ExchangeRate
 
 </p>
 
-
 <h2>Guidelines</h2>
 
 <ul>
@@ -30,16 +29,16 @@ This project is an interactive currency converter that utilizes the ExchangeRate
 <h2>Concepts Worked On</h2>
 
 <ul>
-
-<li>REST API Consumption with HTTP GET requests;</li>
-
-<li>JSON Manipulation through the Gson library to turn raw data into Java Objects (Records/DTOs);</li>
-
-<li>Using property files (.properties) to protect sensitive credentials;</li>
-
-<li>Implementing try-catch blocks to manage network issues and invalid user inputs;</li>
-
-<li>Using the <code>Scanner</code> class for user interaction.</li>
+  
+  <li>REST API Consumption with HTTP GET requests;</li>
+  
+  <li>JSON Manipulation through the Gson library to turn raw data into Java Objects (Records/DTOs);</li>
+  
+  <li>Using property files (.properties) to protect sensitive credentials;</li>
+  
+  <li>Implementing try-catch blocks to manage network issues and invalid user inputs;</li>
+  
+  <li>Using the <code>Scanner</code> class for user interaction.</li>
 
 </ul>
 
@@ -47,12 +46,12 @@ This project is an interactive currency converter that utilizes the ExchangeRate
 
 <ol>
 
-<li>Clone the repository;</li>
-
-<li>Set up dependencies (Gson library);</li>
-
-<li>Create a <code>config.properties</code> file in the root directory with your key <code>rate.apiKey=YOUR_API_KEY_HERE</code>;</li>
-
-<li>Compile and run the <code>Main</code> class;</li>
+  <li>Clone the repository;</li>
+  
+  <li>Set up dependencies (Gson library);</li>
+  
+  <li>Create a <code>config.properties</code> file in the root directory with your key <code>rate.apiKey=YOUR_API_KEY_HERE</code>;</li>
+  
+  <li>Compile and run the <code>Main</code> class;</li>
 
 </ol> 
